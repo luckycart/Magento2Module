@@ -25,9 +25,9 @@ php bin/magento setup:static-content:deploy
 
 #### What to do when the module does not get updated
 
-Sometimes, running `composer update` does not actually update the module to the desired version, for example because it does not match the [version constraints](https://getcomposer.org/doc/articles/versions.md#versions-and-constraints) specified in your `composer.json` (run this command to know the exact reason why: `composer prohibits shoppingfeed/magento2-manager`).
+Sometimes, running `composer update` does not actually update the module to the desired version, for example because it does not match the [version constraints](https://getcomposer.org/doc/articles/versions.md#versions-and-constraints) specified in your `composer.json` (run this command to know the exact reason why: `composer prohibits yuukooagency/luckycart`).
 
-When this happens, simply adapt your `composer.json` to point to the new version you want to install, before re-running the update commands (and if that would still not be sufficient, do not hesitate to [post an issue](https://github.com/shoppingflux/module-magento2/issues/new) so that we can have a look at it).
+When this happens, simply adapt your `composer.json` to point to the new version you want to install, before re-running the update commands (and if that would still not be sufficient, do not hesitate to [post an issue](https://github.com/yuukooagency/luckycart/issues/new) so that we can have a look at it).
 
 ## Maintenance mode
 
