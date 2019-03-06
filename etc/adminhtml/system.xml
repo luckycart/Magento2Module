@@ -1,17 +1,17 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
 	<system>
-		<tab id="yuukoo" sortOrder="999" translate="label">
-			<label>yuukoo</label>
-		</tab>
-		<section id="luckycart" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+		<tab id="luckycart" sortOrder="999" translate="label">
 			<label>luckycart</label>
-			<tab>yuukoo</tab>
+		</tab>
+		<section id="api_settings" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>API Settings</label>
+			<tab>luckycart</tab>
 			<resource>Yuukoo_Luckycart::config_yuukoo_luckycart</resource>
-			<group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
-				<label>general</label>
+			<group id="settings" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>Settings</label>
 				<field id="enable" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>enable</label>
+					<label>Enable</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
 				</field>
@@ -23,15 +23,28 @@
 					<label>api_secret</label>
 					<comment/>
 					<backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
-					<config_path>luckycart/general/api_secret</config_path>
+					<config_path>api_settings/settings/api_secret</config_path>
+				</field>
+			</group>
+		</section>
+		<section id="fields" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>Fields</label>
+			<tab>luckycart</tab>
+			<resource>Yuukoo_Luckycart::config_yuukoo_luckycart</resource>
+			<group id="brand" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>Brand</label>
+				<field id="brand" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Brand</label>
+					<comment/>
+					<source_model>Magento\Catalog\Model\Product\Attribute\Source\Countryofmanufacture</source_model>
 				</field>
 			</group>
 			<group id="fields" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
-				<label>fields</label>
-				<field id="brand" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>brand</label>
+				<label>Fields</label>
+				<field id="invoice_country" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Invoice country</label>
 					<comment/>
-					<source_model>Magento\Catalog\Model\Product\Type</source_model>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
 			</group>
 		</section>

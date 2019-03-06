@@ -1,15 +1,20 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
 	<default>
-		<luckycart>
-			<general>
+		<api_settings>
+			<settings>
 				<enable/>
 				<api_key/>
 				<api_secret/>
-			</general>
-			<fields>
+			</settings>
+		</api_settings>
+		<fields>
+			<brand>
 				<brand/>
+			</brand>
+			<fields>
+				<invoice_country/>
 			</fields>
-		</luckycart>
+		</fields>
 	</default>
 </config>

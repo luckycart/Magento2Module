@@ -6,7 +6,7 @@
 				<resource id="Magento_Backend::stores">
 					<resource id="Magento_Backend::stores_settings">
 						<resource id="Magento_Config::config">
-							<resource id="Yuukoo_Luckycart::config_yuukoo_luckycart" title="luckycart"/>
+							<resource id="Yuukoo_Luckycart::config_yuukoo_luckycart" title="api_settings"/>
 						</resource>
 					</resource>
 				</resource>
