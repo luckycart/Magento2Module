@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="yuukoo" sortOrder="999" translate="label">
+			<label>yuukoo</label>
+		</tab>
+		<section id="luckycart" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>luckycart</label>
+			<tab>yuukoo</tab>
+			<resource>Yuukoo_Luckycart::config_yuukoo_luckycart</resource>
+			<group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>general</label>
+				<field id="enable" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>enable</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="api_key" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>api_key</label>
+					<comment/>
+				</field>
+				<field id="api_secret" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="obscure">
+					<label>api_secret</label>
+					<comment/>
+					<backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+					<config_path>luckycart/general/api_secret</config_path>
+				</field>
+			</group>
+			<group id="fields" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>fields</label>
+				<field id="brand" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>brand</label>
+					<comment/>
+					<source_model>Magento\Catalog\Model\Product\Type</source_model>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>
