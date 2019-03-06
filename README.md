@@ -1,5 +1,5 @@
 # LuckyCart integration module for Magento 2
----
+
 ## Installation
 
 The extension must be installed via `composer`. To proceed, run these commands in your terminal:
