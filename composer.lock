@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94345def7d393511814f12a7fd5a361d",
+    "content-hash": "056430bd13ead1ad7144d94d7b7bcb81",
     "packages": [
         {
             "name": "luckycart/luckycart",
