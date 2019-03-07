@@ -14,7 +14,30 @@
 			</brand>
 			<fields>
 				<invoice_country/>
+				<optin/>
+				<email/>
+				<payment_method/>
+				<firstname/>
+				<lastname/>
+				<discount_code/>
+				<lang/>
+				<store_id/>
+				<title/>
+				<new_customer/>
+				<shipping/>
+				<discount/>
+				<group/>
+				<age/>
+				<address/>
+				<postcode/>
+				<total_amount/>
+				<orders_count/>
+				<order_status/>
+				<ip_address/>
 			</fields>
+			<cancelation>
+				<status/>
+			</cancelation>
 		</fields>
 	</default>
 </config>

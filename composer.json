@@ -3,6 +3,9 @@
     "description": "Lucky Cart implementation on Magento 2",
     "type": "magento2-module",
     "license": "GPL-3.0",
+    "config": {
+	    "secure-http":false
+  	},
     "authors": [
         {
             "email": "support@yuukoo.com",
@@ -10,7 +13,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "luckycart/luckycart": "^2.8"
+    },
     "autoload": {
         "files": [
             "registration.php"
@@ -18,5 +23,18 @@
         "psr-4": {
             "Yuukoo\\Luckycart\\": ""
         }
-    }
+    },
+    "repositories": [
+    	{
+			"type": "package",
+			"package" : {
+				"name": "luckycart/luckycart",
+				"version": "2.8",
+				"dist": {
+					"url": "http://download.luckycart.com/integration/php/luckycart.php",
+					"type": "file"
+				}
+			}
+    	}
+    ]
 }

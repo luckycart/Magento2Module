@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Yuukoo_Luckycart::luckycart_menu"
+             title="Luckycart"
+             module="Yuukoo_Luckycart"
+             sortOrder="110"
+             dependsOnModule="Yuukoo_Luckycart"
+             resource="Yuukoo_Luckycart::main_menu"
+             action="adminhtml/system_config/edit/section/api_settings"
+        />
+    </menu>
+</config>
