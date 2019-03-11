@@ -4,35 +4,33 @@
 		<tab id="luckycart" sortOrder="999" translate="label">
 			<label>luckycart</label>
 		</tab>
-		<section id="api_settings" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
-			<label>API Settings</label>
+		<section id="luckycart" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>Settings</label>
 			<tab>luckycart</tab>
 			<resource>Yuukoo_Luckycart::config_yuukoo_luckycart</resource>
-			<group id="settings" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
-				<label>Settings</label>
+			<group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>General</label>
 				<field id="enable" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
 					<label>Enable</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
 				</field>
-				<field id="api_key" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
-					<label>Api Key</label>
+			</group>
+			<group id="api" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>API Settings</label>
+				<field id="key" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>API Key</label>
 					<comment/>
 				</field>
-				<field id="api_secret" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="obscure">
-					<label>Api Secret</label>
+				<field id="secret" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="obscure">
+					<label>API Secret</label>
 					<comment/>
 					<backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
-					<config_path>api_settings/settings/api_secret</config_path>
+					<config_path>luckycart/api/secret</config_path>
 				</field>
 			</group>
-		</section>
-		<section id="fields" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label">
-			<label>Fields</label>
-			<tab>luckycart</tab>
-			<resource>Yuukoo_Luckycart::config_yuukoo_luckycart</resource>
-			<group id="brand" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
-				<label>Brand</label>
+			<group id="select" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>Brand Settings</label>
 				<field id="brand" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
 					<label>Brand</label>
 					<comment/>
@@ -87,7 +85,7 @@
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
 				<field id="title" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>title</label>
+					<label>Title (Gender)</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
@@ -151,10 +149,10 @@
 				<label>Cancelation</label>
 				<field id="status" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="multiselect">
 					<label>Status</label>
-					<comment>Choose status that should cancel game</comment>
+					<comment>Choose Order status that will cancel game</comment>
 					<source_model>Magento\Sales\Model\Config\Source\Order\Status</source_model>
 				</field>
 			</group>
-		</section>
+		</section>		
 	</system>
 </config>

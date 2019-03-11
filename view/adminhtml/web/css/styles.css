@@ -1,19 +1,16 @@
 @font-face {
   font-family: 'luckycart';
-  src:  url('fonts/luckycart.eot?qb1qeu');
-  src:  url('fonts/luckycart.eot?qb1qeu#iefix') format('embedded-opentype'),
-    url('fonts/luckycart.ttf?qb1qeu') format('truetype'),
-    url('fonts/luckycart.woff?qb1qeu') format('woff'),
-    url('fonts/luckycart.svg?qb1qeu#luckycart') format('svg');
+  src:  url('../fonts/luckycart.eot?c3wthp');
+  src:  url('../fonts/luckycart.eot?c3wthp#iefix') format('embedded-opentype'),
+    url('../fonts/luckycart.ttf?c3wthp') format('truetype'),
+    url('../fonts/luckycart.woff?c3wthp') format('woff'),
+    url('../fonts/luckycart.svg?c3wthp#luckycart') format('svg');
   font-weight: normal;
   font-style: normal;
 }
-.admin__menu .item-mailchimp-menu.parent.level-0 > a:before {
-    font-family: 'luckycart';
-    content: "\1f340";
-    
-}
 
-.admin__data-grid-wrap .data-grid .data-grid-draggable .data-row .data-grid-thumbnail-cell .admin__control-thumbnail > img:before {
-    border:none;
+.admin__menu .item-luckycart-menu.level-0 > a:before {
+    font-family: 'luckycart';
+    content: "\e900";
+    
 }

@@ -2,7 +2,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 	<body>
 		<referenceContainer name="order.success.additional.info">
-			<block as="order_success" class="Yuukoo\Luckycart\Block\Order\Success" name="order.success" template="Yuukoo_Luckycart::order/success.phtml"/>
+			<block as="luckycart" after="-" class="Yuukoo\Luckycart\Block\Order\Success" name="luckycart.order.success" template="Yuukoo_Luckycart::order/success.phtml"/>
 		</referenceContainer>
 	</body>
 </page>

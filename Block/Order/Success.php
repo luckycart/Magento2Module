@@ -19,22 +19,57 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace Yuukoo\Luckycart\Block\Order;
+namespace Yuukoo\Luckycart\Block\Order; 
+
+require_once("yuukoo/luckycart/luckycart.php");
 
 class Success extends \Magento\Framework\View\Element\Template
 {
+
+	/**
+     * @var \Yuukoo\Luckycart\Helper\Data
+     */
+    protected $_helper;
+
 
     /**
      * Constructor
      *
      * @param \Magento\Framework\View\Element\Template\Context  $context
+     * @param \Ebizmarts\MailChimp\Helper\Data $helper
      * @param array $data
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
+        \Yuukoo\Luckycart\Helper\Data $helper,
         array $data = []
     ) {
         parent::__construct($context, $data);
+        $this->_helper          = $helper;
+    }
+    
+    
+  /**
+   * initPlugin
+   *
+   * create a new LuckyCart object and
+   * init the plugin with an array of data to send to associate with the token
+   * @access private
+   * @return {object} luckyPlugin
+   */
+
+    private function initPlugin() {
+
+        try {
+            $luckycart = new LuckyCart(Mage::helper('luckycart')->getApiKey(), Mage::helper('luckycart')->getApiSecret());
+            $luckyPlugin = $luckycart->plugin($this->getPostData());
+
+
+        } catch (LuckyException $e) {
+            Mage::log("LuckyCart plugin error : " . $e->getMessage());
+            return false;
+        }
+        return $luckyPlugin;
     }
 
     /**
@@ -42,7 +77,16 @@ class Success extends \Magento\Framework\View\Element\Template
      */
     public function displayLuckyCart()
     {
-        //Your block code
-        return __('Hello Developer! This how to get the storename: %1 and this is the way to build a url: %2', $this->_storeManager->getStore()->getName(), $this->getUrl('contacts'));
+    
+     try {
+            $luckycart = new LuckyCart(Mage::helper('luckycart')->getApiKey(), Mage::helper('luckycart')->getApiSecret());
+         //   $luckyPlugin = $luckycart->plugin($this->getPostData());
+
+
+        } catch (LuckyException $e) {
+            Mage::log("LuckyCart plugin error : " . $e->getMessage());
+            return false;
+        }
+        return $luckyPlugin;      
     }
 }
