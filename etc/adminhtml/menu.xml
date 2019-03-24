@@ -7,7 +7,7 @@
              sortOrder="110"
              dependsOnModule="Yuukoo_Luckycart"
              resource="Yuukoo_Luckycart::main_menu"
-             action="adminhtml/system_config/edit/section/api_settings"
+             action="adminhtml/system_config/edit/section/luckycart"
         />
     </menu>
 </config>

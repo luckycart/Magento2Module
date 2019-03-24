@@ -1,17 +1,17 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
 	<default>
-		<api_settings>
-			<settings>
-				<enable/>
-				<api_key/>
-				<api_secret/>
-			</settings>
-		</api_settings>
-		<fields>
-			<brand>
-				<brand/>
-			</brand>
+		<luckycart>
+			<general>
+				<enable>1</enable>
+			</general>
+			<api>
+				<key/>
+				<secret/>
+			</api>						
+			<select>
+				<brand>manufacturer</brand>
+			</select>
 			<fields>
 				<invoice_country/>
 				<optin/>
@@ -36,8 +36,8 @@
 				<ip_address/>
 			</fields>
 			<cancelation>
-				<status/>
+				<status>fraud,closed,canceled,holded</status>
 			</cancelation>
-		</fields>
+		</luckycart>
 	</default>
 </config>

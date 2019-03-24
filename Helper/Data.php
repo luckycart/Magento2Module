@@ -27,8 +27,8 @@ class Data extends AbstractHelper
 {
 
 	const XML_PATH_LUCKYCART_GENERAL_ENABLE			= 'luckycart/settings/enable';
-	const XML_PATH_LUCKYCART_API_KEY				= 'luckycart/settings/api_key';
-	const XML_PATH_LUCKYCART_API_SECRET				= 'luckycart/settings/api_secret';
+	const XML_PATH_LUCKYCART_API_KEY				= 'luckycart/api/key';
+	const XML_PATH_LUCKYCART_API_SECRET				= 'luckycart/api/secret';
 	const XML_PATH_LUCKYCART_SELECT_BRAND			= 'luckycart/select/brand';
 	const XML_PATH_LUCKYCART_FIELDS_INVOICE_COUNTRY	= 'luckycart/fields/invoice_country';
 	const XML_PATH_LUCKYCART_FIELDS_OPTIN			= 'luckycart/fields/optin';
@@ -53,12 +53,16 @@ class Data extends AbstractHelper
 	const XML_PATH_LUCKYCART_FIELDS_IP_ADDRESS		= 'luckycart/fields/ip_address';
 	const XML_PATH_LUCKYCART_CANCELATION_STATUS		= 'luckycart/cancelation/status';
 
+    protected $_encryptor;
+
     /**
      * @param \Magento\Framework\App\Helper\Context $context
      */
     public function __construct(
+        \Magento\Framework\Encryption\EncryptorInterface $encryptor,
         \Magento\Framework\App\Helper\Context $context
     ) {
+        $this->_encryptor = $encryptor;
         parent::__construct($context);
     }
     
@@ -84,9 +88,132 @@ class Data extends AbstractHelper
     
     public function getApiSecret()
     {
-        return $this->getConfig(self::XML_PATH_LUCKYCART_API_SECRET);
+        return $this->_encryptor->decrypt($this->getConfig(self::XML_PATH_LUCKYCART_API_SECRET));
     }
-    
-    
+
+    public function getSelectBrand()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_SELECT_BRAND);
+    }
+
+    public function isEnabledInvoiceCountry()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_INVOICE_COUNTRY);
+    }
+
+    public function isEnabledOptIn()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_OPTIN);
+    }
+
+    public function isEnabledEmail()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_EMAIL);
+    }
+
+    public function isEnabledPaymentMethod()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_PAYMENT_METHOD);
+    }
+
+    public function isEnabledFirstname()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_FIRSTNAME);
+    }
+
+    public function isEnabledLastname()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_LASTNAME);
+    }
+
+    public function isEnabledDiscountCode()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_DISCOUNT_CODE);
+    }
+
+    public function isEnabledStoreLang()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_LANG);
+    }
+
+    public function isEnabledStoreId()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_STORE_ID);
+    }
+
+    public function isEnabledCustomerTitle()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_TITLE);
+    }
+
+    public function isEnabledNewCustomer()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_NEW_CUSTOMER);
+    }
+
+    public function isEnabledShipping()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_SHIPPING);
+    }
+
+    public function isEnabledDiscount()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_DISCOUNT);
+    }
+
+    public function isEnabledGroup()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_GROUP);
+    }
+
+    public function isEnabledAge()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_AGE);
+    }
+
+    public function isEnabledAddress()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_ADDRESS);
+    }
+
+    public function isEnabledPostcode()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_POSTCODE);
+    }
+
+    public function isEnabledTotalAmount()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_TOTAL_AMOUNT);
+    }
+
+    public function isEnabledOrdersCount()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_ORDERS_COUNT);
+    }
+
+    public function isEnabledOrdersStatus()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_ORDER_STATUS);
+    }
+
+    public function isEnabledIpAddress()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_FIELDS_IP_ADDRESS);
+    }
+
+    public function getCancelStatus()
+    {
+        return $this->getConfig(self::XML_PATH_LUCKYCART_CANCELATION_STATUS);
+    }
+
+    public function getShippingTaxConfig()
+    {
+        return $this->getConfig('tax/calculation/shipping_includes_tax');
+    }
+
+    public function getDiscountTaxConfig()
+    {
+        return $this->getConfig('tax/calculation/discount_tax');
+    }
 
 }

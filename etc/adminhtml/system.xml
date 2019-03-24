@@ -34,7 +34,7 @@
 				<field id="brand" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
 					<label>Brand</label>
 					<comment/>
-					<source_model>Yuukoo\Luckycart\Model\Config\Source\Brand</source_model>
+					<source_model>Yuukoo\Luckycart\Model\Config\Source\ProductAttributes</source_model>
 				</field>
 			</group>
 			<group id="fields" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
