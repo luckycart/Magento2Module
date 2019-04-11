@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
-	<event name="sales_order_save_after">
-		<observer instance="Yuukoo\Luckycart\Observer\Sales\OrderSaveAfter" name="yuukoo_luckycart_observer_sales_ordersaveafter_sales_order_save_after"/>
+	<event name="sales_order_state_change_before">
+		<observer instance="Yuukoo\Luckycart\Observer\Sales\OrderStateChangeBefore" name="yuukoo_luckycart_observer_sales_order_state_change_before"/>
 	</event>
 </config>
