@@ -26,7 +26,7 @@ use Magento\Framework\App\Helper\AbstractHelper;
 class Data extends AbstractHelper
 {
 
-	const XML_PATH_LUCKYCART_GENERAL_ENABLE			= 'luckycart/settings/enable';
+	const XML_PATH_LUCKYCART_GENERAL_ENABLE			= 'luckycart/general/enable';
 	const XML_PATH_LUCKYCART_API_KEY				= 'luckycart/api/key';
 	const XML_PATH_LUCKYCART_API_SECRET				= 'luckycart/api/secret';
 	const XML_PATH_LUCKYCART_SELECT_BRAND			= 'luckycart/select/brand';
