@@ -28,17 +28,19 @@ class OrderStateChangeBefore implements \Magento\Framework\Event\ObserverInterfa
      * @var \Yuukoo\Luckycart\Helper\Data
      */
     protected $_helper;
-
+    protected $_logger;
 
 
     /**
      * @param \Yuukoo\Luckycart\Helper\Data $helper
      */
     public function __construct(
+        \Psr\Log\LoggerInterface $logger,
         \Yuukoo\Luckycart\Helper\Data $helper
     )
     {
         $this->_helper = $helper;
+        $this->_logger = $logger;
     }
     /**
      * Execute observer
@@ -68,7 +70,8 @@ class OrderStateChangeBefore implements \Magento\Framework\Event\ObserverInterfa
 
             } catch (LuckyException $e) {
 
-                Mage::log("LuckyCart plugin error : " . $e->getMessage());
+                $message = "LuckyCart plugin error : " . $e->getMessage();
+                $this->logger->debug($message);
             }
 
         }

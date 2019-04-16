@@ -28,6 +28,7 @@ class Success extends \Magento\Checkout\Block\Onepage\Success
      * @var \Yuukoo\Luckycart\Helper\Data
      */
     protected $_helper;
+    protected $_logger;
 
     private $orders;
 
@@ -36,6 +37,7 @@ class Success extends \Magento\Checkout\Block\Onepage\Success
      * @param \Magento\Checkout\Model\Session $checkoutSession
      * @param \Magento\Sales\Model\Order\Config $orderConfig
      * @param \Magento\Framework\App\Http\Context $httpContext
+     * @param \Psr\Log\LoggerInterface $logger $logger
      * @param \Yuukoo\Luckycart\Helper\Data $helper
      * @param array $data
      */
@@ -44,12 +46,14 @@ class Success extends \Magento\Checkout\Block\Onepage\Success
         \Magento\Checkout\Model\Session $checkoutSession,
         \Magento\Sales\Model\Order\Config $orderConfig,
         \Magento\Framework\App\Http\Context $httpContext,
+        \Psr\Log\LoggerInterface $logger,
         \Yuukoo\Luckycart\Helper\Data $helper,
         array $data = []
     )
     {
         parent::__construct($context, $checkoutSession, $orderConfig, $httpContext, $data);
         $this->_helper = $helper;
+        $this->_logger = $logger;
     }
 
     /**
@@ -75,7 +79,8 @@ class Success extends \Magento\Checkout\Block\Onepage\Success
 
         } catch (LuckyException $e) {
 
-            Mage::log("LuckyCart plugin error : " . $e->getMessage());
+            $message = "LuckyCart plugin error : " . $e->getMessage();
+            $this->logger->debug($message);
         }
     }
 
