@@ -80,7 +80,7 @@ class Success extends \Magento\Checkout\Block\Onepage\Success
         } catch (LuckyException $e) {
 
             $message = "LuckyCart plugin error : " . $e->getMessage();
-            $this->logger->debug($message);
+            $this->_logger->debug($message);
         }
     }
 

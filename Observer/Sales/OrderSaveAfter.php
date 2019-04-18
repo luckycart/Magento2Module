@@ -21,7 +21,7 @@
 
 namespace Yuukoo\Luckycart\Observer\Sales;
 
-class OrderStateChangeBefore implements \Magento\Framework\Event\ObserverInterface
+class OrderSaveAfter implements \Magento\Framework\Event\ObserverInterface
 {
 
     /**
@@ -54,26 +54,29 @@ class OrderStateChangeBefore implements \Magento\Framework\Event\ObserverInterfa
         if (!$this->_helper->isEnabled())
             return false;
 
-        $transport = $observer->getEvent()->getTransport();
         $order = $observer->getEvent()->getOrder();
 
-        if (in_array($transport->getState(),explode(",",$this->_helper->getCancelStatus()))) {
+
+
+        if (in_array($order->getState(),explode(",",$this->_helper->getCancelStatus()))) {
 
             try {
                 $luckycart = new \LuckyCart($this->_helper->getApiKey(), $this->_helper->getApiSecret());
 
                 // Cancels the specified cart
                 $cancel_info = $luckycart->cancel($order->getIncrementId());
-                $history = $order->addStatusHistoryComment(__('<strong>LuckyCart:</strong> Cancelation of %s ticket(s) for Order # %s',$cancel_info->tickets,$cancel_info->id));
+                $history = $order->addStatusHistoryComment(__('<strong>LuckyCart:</strong> Cancelation of '. $cancel_info->tickets.' ticket(s) for Order #'.$cancel_info->id));
                 $history->save();
                 $order->save();
 
             } catch (LuckyException $e) {
 
                 $message = "LuckyCart plugin error : " . $e->getMessage();
-                $this->logger->debug($message);
+                $this->_logger->debug($message);
             }
 
         }
+
+        return $this;
     }
 }
