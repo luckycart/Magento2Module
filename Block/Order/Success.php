@@ -129,10 +129,6 @@ class Success extends \Magento\Checkout\Block\Onepage\Success
             'ip' => $this->_helper->isEnabledIpAddress() ? $this->getCustomerIp() : '',
         );
 
-//        echo "<pre>";
-//        print_r($postdata);
-//        die();
-
         return $postdata;
     }
 
@@ -202,7 +198,10 @@ class Success extends \Magento\Checkout\Block\Onepage\Success
 
     private function getCurrentLang()
     {
-        $locale = new \Zend_Locale($this->_storeManager->getStore()->getLocaleCode());
+        $locale = new \Zend_Locale(
+            \Magento\Framework\App\ObjectManager::getInstance()
+                ->get('Magento\Framework\App\Config\ScopeConfigInterface')
+                ->getValue('general/locale/code', \Magento\Store\Model\ScopeInterface::SCOPE_STORE, $this->getOrder()->getStoreId()));
 
         return strtoupper($locale->getLanguage());
     }
@@ -231,7 +230,7 @@ class Success extends \Magento\Checkout\Block\Onepage\Success
                 'ht' => $this->numberFormat($_item->getPrice()),
                 'qty' => (int)$_item->getQtyOrdered(),
                 'cat' => implode(";", $product->getCategoryIds()),
-                'brand' => ($product->getAttribute($this->_helper->getSelectBrand())) ? $product->getAttributeText($this->_helper->getSelectBrand()) : '',
+                'brand' => ($product->getAttributeText($this->_helper->getSelectBrand())) ? $product->getAttributeText($this->_helper->getSelectBrand()) : '',
             );
         }
 

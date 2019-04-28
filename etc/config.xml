@@ -35,9 +35,9 @@
 				<order_status/>
 				<ip_address/>
 			</fields>
-			<cancelation>
+			<cancellation>
 				<status>fraud,closed,canceled,holded</status>
-			</cancelation>
+			</cancellation>
 		</luckycart>
 	</default>
 </config>

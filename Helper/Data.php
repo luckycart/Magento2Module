@@ -51,7 +51,7 @@ class Data extends AbstractHelper
 	const XML_PATH_LUCKYCART_FIELDS_ORDERS_COUNT	= 'luckycart/fields/orders_count';
 	const XML_PATH_LUCKYCART_FIELDS_ORDER_STATUS	= 'luckycart/fields/order_status';
 	const XML_PATH_LUCKYCART_FIELDS_IP_ADDRESS		= 'luckycart/fields/ip_address';
-	const XML_PATH_LUCKYCART_CANCELATION_STATUS		= 'luckycart/cancelation/status';
+	const XML_PATH_LUCKYCART_CANCELLATION_STATUS		= 'luckycart/cancellation/status';
 
     protected $_encryptor;
 
@@ -203,7 +203,7 @@ class Data extends AbstractHelper
 
     public function getCancelStatus()
     {
-        return $this->getConfig(self::XML_PATH_LUCKYCART_CANCELATION_STATUS);
+        return $this->getConfig(self::XML_PATH_LUCKYCART_CANCELLATION_STATUS);
     }
 
     public function getShippingTaxConfig()

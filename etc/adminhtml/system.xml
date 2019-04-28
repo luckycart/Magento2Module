@@ -16,7 +16,7 @@
 					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
 				</field>
 			</group>
-			<group id="api" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<group id="api" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label">
 				<label>API Settings</label>
 				<field id="key" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
 					<label>API Key</label>
@@ -29,7 +29,7 @@
 					<config_path>luckycart/api/secret</config_path>
 				</field>
 			</group>
-			<group id="select" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<group id="select" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label">
 				<label>Brand Settings</label>
 				<field id="brand" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
 					<label>Brand</label>
@@ -37,118 +37,118 @@
 					<source_model>Yuukoo\Luckycart\Model\Config\Source\ProductAttributes</source_model>
 				</field>
 			</group>
-			<group id="fields" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<group id="fields" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label">
 				<label>Fields</label>
-				<field id="invoice_country" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+				<field id="invoice_country" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="101" translate="label" type="select">
 					<label>Invoice country</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="optin" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>Opt In</label>
+				<field id="optin" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="102" translate="label" type="select">
+					<label>OptIn</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="email" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>email</label>
+				<field id="email" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="103" translate="label" type="select">
+					<label>Email</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="payment_method" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>payment_method</label>
+				<field id="payment_method" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="104" translate="label" type="select">
+					<label>Payment method</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="firstname" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>firstname</label>
+				<field id="firstname" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="105" translate="label" type="select">
+					<label>Firstname</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="lastname" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>lastname</label>
+				<field id="lastname" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="106" translate="label" type="select">
+					<label>Lastname</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="discount_code" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>discount_code</label>
+				<field id="discount_code" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="107" translate="label" type="select">
+					<label>Discount code</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="lang" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>lang</label>
+				<field id="lang" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="108" translate="label" type="select">
+					<label>Lang</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="store_id" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>store_id</label>
+				<field id="store_id" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="109" translate="label" type="select">
+					<label>Store ID</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="title" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+				<field id="title" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="110" translate="label" type="select">
 					<label>Title (Gender)</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="new_customer" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>new_customer</label>
+				<field id="new_customer" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="111" translate="label" type="select">
+					<label>New customer</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="shipping" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>shipping</label>
+				<field id="shipping" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="112" translate="label" type="select">
+					<label>Shipping</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="discount" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>discount</label>
+				<field id="discount" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="113" translate="label" type="select">
+					<label>Discount</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="group" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>group</label>
+				<field id="group" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="114" translate="label" type="select">
+					<label>Group</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="age" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>age</label>
+				<field id="age" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="115" translate="label" type="select">
+					<label>Age</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="address" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>address</label>
+				<field id="address" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="116" translate="label" type="select">
+					<label>Address</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="postcode" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>postcode</label>
+				<field id="postcode" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="117" translate="label" type="select">
+					<label>Zip</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="total_amount" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>total_amount</label>
+				<field id="total_amount" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="118" translate="label" type="select">
+					<label>Total Amount(inc. VAT)</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="orders_count" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>orders_count</label>
+				<field id="orders_count" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="119" translate="label" type="select">
+					<label>Total orders</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="order_status" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>order_status</label>
+				<field id="order_status" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="120" translate="label" type="select">
+					<label>Order status</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
-				<field id="ip_address" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-					<label>ip_address</label>
+				<field id="ip_address" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="121" translate="label" type="select">
+					<label>IP address</label>
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
 			</group>
-			<group id="cancelation" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
-				<label>Cancelation</label>
+			<group id="cancellation" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="50" translate="label">
+				<label>Cancellation</label>
 				<field id="status" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="multiselect">
-					<label>Status</label>
+					<label>Targeted status</label>
 					<comment>Choose Order status that will cancel game</comment>
 					<source_model>Magento\Sales\Model\Config\Source\Order\Status</source_model>
 				</field>
