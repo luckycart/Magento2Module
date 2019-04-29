@@ -65,7 +65,7 @@ class OrderSaveAfter implements \Magento\Framework\Event\ObserverInterface
 
                 // Cancels the specified cart
                 $cancel_info = $luckycart->cancel($order->getIncrementId());
-                $history = $order->addStatusHistoryComment(__('<strong>LuckyCart:</strong> Cancellation of '. $cancel_info->tickets.' ticket(s) for Order #'.$cancel_info->id));
+                $history = $order->addStatusHistoryComment(__('<strong>LuckyCart:</strong> Cancellation of %1 ticket(s) for Order #%2', $cancel_info->tickets, $cancel_info->id));
                 $history->save();
                 $order->save();
 

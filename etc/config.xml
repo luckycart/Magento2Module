@@ -3,7 +3,7 @@
 	<default>
 		<luckycart>
 			<general>
-				<enable>1</enable>
+				<enable>0</enable>
 			</general>
 			<api>
 				<key/>
@@ -13,27 +13,27 @@
 				<brand>manufacturer</brand>
 			</select>
 			<fields>
-				<invoice_country/>
-				<optin/>
-				<email/>
+				<invoice_country>0</invoice_country>
+				<optin>0</optin>
+				<email>0</email>
 				<payment_method/>
-				<firstname/>
-				<lastname/>
-				<discount_code/>
-				<lang/>
-				<store_id/>
-				<title/>
-				<new_customer/>
-				<shipping/>
-				<discount/>
-				<group/>
-				<age/>
-				<address/>
-				<postcode/>
-				<total_amount/>
-				<orders_count/>
-				<order_status/>
-				<ip_address/>
+				<firstname>0</firstname>
+				<lastname>0</lastname>
+				<discount_code>0</discount_code>
+				<lang>0</lang>
+				<store_id>0</store_id>
+				<title>0</title>
+				<new_customer>0</new_customer>
+				<shipping>0</shipping>
+				<discount>0</discount>
+				<group>0</group>
+				<age>0</age>
+				<address>0</address>
+				<postcode>0</postcode>
+				<total_amount>0</total_amount>
+				<orders_count>0</orders_count>
+				<order_status>0</order_status>
+				<ip_address>0</ip_address>
 			</fields>
 			<cancellation>
 				<status>fraud,closed,canceled,holded</status>

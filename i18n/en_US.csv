@@ -1,1 +1,34 @@
-"string","stringtranslated"
+"<strong>LuckyCart:</strong> Cancellation of %1 ticket(s) for Order #%2","<strong>LuckyCart:</strong> Cancellation of %1 ticket(s) for Order #%2"
+"API Key","API Key"
+"API Secret","API Secret"
+"API Settings","API Settings"
+"Brand Settings","Brand Settings"
+"Discount code","Discount code"
+"Invoice country","Invoice country"
+"IP address","IP address"
+"New customer","New customer"
+"Order status","Order status"
+"Payment method","Payment method"
+"Store ID","Store ID"
+"Targeted status","Targeted status"
+"Title (Gender)","Title (Gender)"
+"Total Amount(inc. VAT)","Total Amount(inc. VAT)"
+"Total orders","Total orders"
+Address,Address
+Age,Age
+Brand,Brand
+Cancellation,Cancellation
+Discount,Discount
+Email,Email
+Enable,Enable
+Fields,Fields
+Firstname,Firstname
+General,General
+Group,Group
+Lang,Lang
+Lastname,Lastname
+luckycart,luckycart
+OptIn,OptIn
+Settings,Settings
+Shipping,Shipping
+Zip,Zip
