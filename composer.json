@@ -1,5 +1,5 @@
 {
-    "name": "yuukooagency/luckycart",
+    "name": "luckycart/magento2",
     "description": "Lucky Cart implementation on Magento 2",
     "type": "magento2-module",
     "license": "GPL-3.0",
