@@ -5,7 +5,7 @@
 The extension must be installed via `composer`. To proceed, run these commands in your terminal:
 
 ```
-composer require yuukooagency/luckycart
+composer require luckycart/magento2
 php bin/magento module:enable Yuukoo_Luckycart
 php bin/magento setup:upgrade 
 php bin/magento setup:di:compile 
@@ -17,7 +17,7 @@ php bin/magento setup:static-content:deploy
 To update the extension to the latest available version (depending on your `composer.json`), run these commands in your terminal:
 
 ```
-composer update yuukooagency/luckycart --with-dependencies
+composer update luckycart/magento2 --with-dependencies
 php bin/magento setup:di:compile
 php bin/magento setup:upgrade
 php bin/magento setup:static-content:deploy
