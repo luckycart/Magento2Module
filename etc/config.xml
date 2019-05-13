@@ -4,14 +4,10 @@
 		<luckycart>
 			<general>
 				<enable>0</enable>
-			</general>
-			<api>
 				<key/>
 				<secret/>
-			</api>						
-			<select>
 				<brand>manufacturer</brand>
-			</select>
+            </general>
 			<fields>
 				<invoice_country>0</invoice_country>
 				<optin>0</optin>

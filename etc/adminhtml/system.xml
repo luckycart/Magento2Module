@@ -15,9 +15,6 @@
 					<comment/>
 					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
 				</field>
-			</group>
-			<group id="api" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label">
-				<label>API Settings</label>
 				<field id="key" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
 					<label>API Key</label>
 					<comment/>
@@ -28,9 +25,6 @@
 					<backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
 					<config_path>luckycart/api/secret</config_path>
 				</field>
-			</group>
-			<group id="select" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label">
-				<label>Brand Settings</label>
 				<field id="brand" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
 					<label>Brand</label>
 					<comment/>

@@ -27,9 +27,9 @@ class Data extends AbstractHelper
 {
 
 	const XML_PATH_LUCKYCART_GENERAL_ENABLE			= 'luckycart/general/enable';
-	const XML_PATH_LUCKYCART_API_KEY				= 'luckycart/api/key';
-	const XML_PATH_LUCKYCART_API_SECRET				= 'luckycart/api/secret';
-	const XML_PATH_LUCKYCART_SELECT_BRAND			= 'luckycart/select/brand';
+	const XML_PATH_LUCKYCART_API_KEY				= 'luckycart/general/key';
+	const XML_PATH_LUCKYCART_API_SECRET				= 'luckycart/general/secret';
+	const XML_PATH_LUCKYCART_SELECT_BRAND			= 'luckycart/general/brand';
 	const XML_PATH_LUCKYCART_FIELDS_INVOICE_COUNTRY	= 'luckycart/fields/invoice_country';
 	const XML_PATH_LUCKYCART_FIELDS_OPTIN			= 'luckycart/fields/optin';
 	const XML_PATH_LUCKYCART_FIELDS_EMAIL			= 'luckycart/fields/email';
@@ -51,7 +51,7 @@ class Data extends AbstractHelper
 	const XML_PATH_LUCKYCART_FIELDS_ORDERS_COUNT	= 'luckycart/fields/orders_count';
 	const XML_PATH_LUCKYCART_FIELDS_ORDER_STATUS	= 'luckycart/fields/order_status';
 	const XML_PATH_LUCKYCART_FIELDS_IP_ADDRESS		= 'luckycart/fields/ip_address';
-	const XML_PATH_LUCKYCART_CANCELLATION_STATUS		= 'luckycart/cancellation/status';
+	const XML_PATH_LUCKYCART_CANCELLATION_STATUS	= 'luckycart/cancellation/status';
 
     protected $_encryptor;
 
