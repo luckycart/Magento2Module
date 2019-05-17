@@ -38,3 +38,15 @@ php bin/magento maintenance:enable
 # Other setup commands
 php bin/magento maintenance:disable
 ```
+
+## Uninstallation
+
+To uninstall the extension from your system, run the following command in your terminal:
+
+```
+magento module:uninstall Yuukoo_Luckycart
+```
+
+Your website will be switched automatically to maintenance mode during uninstallation and took out of it after.
+For more information about uninstalling modules please refer to [Magento Documentation](https://devdocs.magento.com/guides/v2.3/install-gde/install/cli/install-cli-uninstall-mods.html)
+
