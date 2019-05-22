@@ -23,7 +23,7 @@
 					<label>API Secret</label>
 					<comment/>
 					<backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
-					<config_path>luckycart/api/secret</config_path>
+					<config_path>luckycart/general/secret</config_path>
 				</field>
 				<field id="brand" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
 					<label>Brand</label>

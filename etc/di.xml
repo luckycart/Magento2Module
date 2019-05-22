@@ -3,6 +3,9 @@
     <type name="Yuukoo\Luckycart\Model\Config\Source\Brand">
         <arguments>
             <argument name="attributecollectionFactory" xsi:type="object">Magento\Catalog\Model\ResourceModel\Product\Attribute\CollectionFactory</argument>
+            <argument name="sensitive" xsi:type="array">
+                <item name="luckycart/general/secret" xsi:type="string">1</item>
+            </argument>
         </arguments>
     </type>
 </config>

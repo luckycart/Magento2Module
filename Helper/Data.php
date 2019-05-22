@@ -53,16 +53,12 @@ class Data extends AbstractHelper
 	const XML_PATH_LUCKYCART_FIELDS_IP_ADDRESS		= 'luckycart/fields/ip_address';
 	const XML_PATH_LUCKYCART_CANCELLATION_STATUS	= 'luckycart/cancellation/status';
 
-    protected $_encryptor;
-
     /**
      * @param \Magento\Framework\App\Helper\Context $context
      */
     public function __construct(
-        \Magento\Framework\Encryption\EncryptorInterface $encryptor,
         \Magento\Framework\App\Helper\Context $context
     ) {
-        $this->_encryptor = $encryptor;
         parent::__construct($context);
     }
     
@@ -88,7 +84,7 @@ class Data extends AbstractHelper
     
     public function getApiSecret()
     {
-        return $this->_encryptor->decrypt($this->getConfig(self::XML_PATH_LUCKYCART_API_SECRET));
+        return $this->getConfig(self::XML_PATH_LUCKYCART_API_SECRET);
     }
 
     public function getSelectBrand()
